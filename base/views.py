@@ -9,6 +9,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 
+from hitcount.views import HitCountDetailView
+
 from .models import Task
 
 
@@ -58,10 +60,11 @@ class TaskList(LoginRequiredMixin, ListView):               # Looks for task_lis
         return context
         
     
-class TaskDetail(LoginRequiredMixin, DetailView):           # Looks for task_detail.html by default
+class TaskDetail(LoginRequiredMixin, HitCountDetailView):           # Looks for task_detail.html by default
     model = Task
     context_object_name = 'task'
     template_name = 'base/task.html'
+    count_hit = True
     
 class TaskCreate(LoginRequiredMixin, CreateView):           # Looks for task_form.html by default
     model = Task
