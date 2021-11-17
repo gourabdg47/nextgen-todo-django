@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-eu3i_(_5q8ly)*hb!k_g&s!+qqq_kqz2u$u-&rimxa5!!3%rh&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['nextgen-to-do-django.herokuapp.com', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = ['gourabdg.pythonanywhere.com']
 
 
 # Application definition
@@ -124,7 +124,7 @@ LOGIN_URL = 'login'
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = '/home/gourabdg/nextgen-todo-django/static' #os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
